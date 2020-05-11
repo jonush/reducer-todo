@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto';
-  background-color: #d9e9ea;
+  background-color: royalblue;
 }
 
 .todo-app {
@@ -12,10 +12,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 50px;
+  border-radius: 20px;
+  background: white;
+  /*border-radius: 50px;
   background: #d9e9ea;
-  box-shadow:  20px 20px 60px #b8c6c7, 
-             -20px -20px 60px #faffff;
+  box-shadow: 20px 20px 60px #b8c6c7,
+  -20px -20px 60px #faffff;*/
 }
 
 h1 {

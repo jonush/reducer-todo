@@ -4,6 +4,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import './App.css';
 
+// Date Feature
 let date = new Date();
 const month = date.toLocaleString('default', { month: 'long' });
 const dd = String(date.getDate()).padStart(2, '0');
@@ -23,8 +24,8 @@ function App() {
     dispatch({ type: "ADD_TODO", payload: task });
   }
 
-  const toggleTask = toggle => {
-    dispatch({ type: "TOGGLE_TODO", payload: toggle });
+  const toggleTask = todo => {
+    dispatch({ type: "TOGGLE_TODO", payload: todo });
   }
 
   const clearTasks = () => {
@@ -38,12 +39,13 @@ function App() {
       <h2 className='todo-title' >Tasks</h2>
 
       <TodoList
-        tasks={state}
+        state={state}
         toggleTask={toggleTask}
         clearTasks={clearTasks}
       />
 
       <TodoForm
+        task={task}
         handleInput={handleInput}
         handleSubmit={handleSubmit}
       />

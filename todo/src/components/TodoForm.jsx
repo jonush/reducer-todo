@@ -9,6 +9,7 @@ const TodoForm = props => {
           type="text"
           name="task"
           value={props.task}
+          placeholder='Add a New Task'
           onChange={props.handleInput}
         />
 
